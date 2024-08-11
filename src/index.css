@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(234, 11%, 52%);
+  border-radius: 5px;
+}
+.spinner {
+  margin: 4.8rem auto;
+  width: 6.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-right-color: rgb(121, 3, 121);
+  animation: spinner 1.5s infinite linear;
+}
+.complete {
+  background: linear-gradient(0deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes spinner {
+  100% {
+    rotate: 360deg;
+  }
+}
